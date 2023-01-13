@@ -19,7 +19,7 @@ void Welcome();					 // OK
 void Menu();					 // OK
 void Cout1();					 // OK
 void Cout2(int);				 // OK
-void Cout3(int, int, int);		 // OK
+void Cout3(int, string);		 // OK
 void Add();						 // OK
 void Add_Test();				 // OK
 void Edit();					 // OK
@@ -51,12 +51,13 @@ void Welcome()
 {
     system("clear");
 
-	cout << "\n                _________________________________________              ";
-	cout << "\n               |                                         |             ";
-	cout << "\n               |             Student Project             |             ";
-	cout << "\n               |_________________________________________|             ";
-	cout << "\n                                                                       ";
-	cout << "\n\n";
+	cout << endl;
+	cout << "                _________________________________________              " << endl;
+	cout << "               |                                         |             " << endl;
+	cout << "               |             Student Project             |             " << endl;
+	cout << "               |_________________________________________|             " << endl;
+	cout << "                                                                       " << endl;
+	cout << endl;
 
 	sleep_for(3s);
 
@@ -72,6 +73,7 @@ void Menu()
 	while (true)
 	{
 		system("clear");
+		cout << endl;
 		cout << "  +-------------------------------------------------------------------+" << endl;
 		cout << "  |                                                                   |" << endl;
 		cout << "  |  1 - Enter Student information.                                   |" << endl;
@@ -131,20 +133,14 @@ void Cout1()
 	//     | 9821973101 |  1451597398  | mohammad javad |  ahmadi hadi  | computer  |  Roozane  |
 	//     +------------+--------------+----------------+---------------+-----------+-----------+
 
-	cout << "\n\t +------------+--------------+----------------+---------------+-----------+-----------+\n\t ";
-	cout << "|   "
-		 << "St_num";
-	cout << "   | "
-		 << "NationalCode";
-	cout << " |   "
-		 << "First name";
-	cout << "   |   "
-		 << "Last name";
-	cout << "   |   "
-		 << "Field";
-	cout << "   |   "
-		 << "Turn"
-		 << "    |";
+	cout << endl;
+	cout << "\t +------------+--------------+----------------+---------------+-----------+-----------+" << endl;
+	cout << "\t |   " << "St_num";
+	cout << "   | " << "NationalCode";
+	cout << " |   " << "First name";
+	cout << "   |   " << "Last name";
+	cout << "   |   " << "Field";
+	cout << "   |   " << "Turn" << "    |" << endl;
 	cout << "\n\t +------------+--------------+----------------+---------------+-----------+-----------+";
 }
 
@@ -167,13 +163,13 @@ void Cout2(int i)
 	}
 }
 
-void Cout3(int n, string str)
+void Cout3(int n, string key)
 {
 	int a;
 
-	a = n - str.length();
+	a = n - key.length();
 
-	cout << setw((a / 2) + (n - a)) << str;
+	cout << setw((a / 2) + (n - a)) << key;
 
 	if (a % 2 == 1)
 		cout << " ";
